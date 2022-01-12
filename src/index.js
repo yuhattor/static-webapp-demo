@@ -73,7 +73,7 @@ const Sessions = ({session}) => {
 		    return <div><Sessions key={session.test} session={session} /></div>;
 		  })
 		) : (
-		  <p><center>Loading...</center></p>
+		  <p><center>ローディング...</center></p>
 		)}
 	      </div>
       
