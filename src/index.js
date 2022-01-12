@@ -7,28 +7,25 @@ import axios from 'axios';
 
 const Sessions = ({session}) => {
 	return (
-<div class="card">
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">{session.session_name}</p>
-        <p class="subtitle is-6">{session.company}<br />{session.name}</p>
-      </div>
-    </div>
-	      
-	      
-	      
-
-    <div class="content">
-{session.description}
-<br />
-<span class="tag is-info">#{session.session_id}</span>
-<br />
-      <time datetime="2016-1-1">{session.time}</time>
-    </div>
-  </div>
-<hr></hr>
-</div>
+                <div class="card">
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4">{session.session_name}</p>
+                          <p class="subtitle is-6">{session.company}<br />{session.name}</p>
+                        </div>
+                      </div>
+                    
+                      <div class="content">
+                {session.description}
+                <br />
+                <span class="tag is-info">#{session.session_id}</span>
+                <br />
+                      <time datetime="2016-1-1">{session.time}</time>
+                    </div>
+                  </div>
+                <hr></hr>
+                </div>
 	)
       }
       
@@ -73,10 +70,10 @@ const Sessions = ({session}) => {
 	      <div className="container">
 		{!isLoading ? (
 		  sessions.map(session => {
-		    return <Sessions key={session.test} session={session} />;
+		    return <div><Sessions key={session.test} session={session} /></div>;
 		  })
 		) : (
-		  <p>Loading...</p>
+		  <p><center>Loading...</center></p>
 		)}
 	      </div>
       
